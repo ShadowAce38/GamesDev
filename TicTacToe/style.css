@@ -1,0 +1,130 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f9f9f9; /* Arrière-plan clair pour plus de contraste */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hauteur de la vue pour centrer verticalement */
+}
+
+/* Conteneur principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles du plateau de jeu */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    gap: 1px; /* Espacement entre les cellules pour des bordures plus visibles */
+    border: 2px solid #333; /* Bordure autour du plateau */
+    border-radius: 5px; /* Coins arrondis pour le plateau */
+    background-color: #fff; /* Fond blanc pour les cellules */
+}
+
+/* Styles des cellules */
+.cell {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ddd; /* Bordure fine pour les cellules */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s; /* Transition douce pour les changements de couleur */
+}
+
+/* Styles pour les cellules au survol */
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+/* Styles pour les X */
+.cell.X {
+    color: #c62828; /* Rouge foncé pour X */
+    font-weight: bold; /* Gras pour les X */
+}
+
+/* Styles pour les O */
+.cell.O {
+    color: #2e7d32; /* Vert foncé pour O */
+    font-weight: bold; /* Gras pour les O */
+}
+
+/* Styles pour les éléments désactivés */
+.disabled {
+    pointer-events: none;
+}
+
+/* Styles des boutons */
+button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Coins arrondis pour les boutons */
+    background-color: #007bff; /* Couleur de fond des boutons */
+    color: white; /* Texte en blanc */
+    transition: background-color 0.3s; /* Transition douce pour le fond */
+}
+
+/* Styles des boutons au survol */
+button:hover {
+    background-color: #0056b3; /* Couleur de fond plus foncée au survol */
+}
+
+/* Styles du formulaire de joueur */
+#playerForm {
+    margin-bottom: 20px;
+}
+
+#playerForm input {
+    padding: 5px;
+    font-size: 1em;
+    margin-right: 10px;
+    border: 1px solid #ccc; /* Bordure des champs de saisie */
+    border-radius: 5px; /* Coins arrondis pour les champs de saisie */
+}
+
+#playerForm button {
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px; /* Coins arrondis pour le bouton */
+    background-color: #28a745; /* Couleur de fond du bouton */
+    color: white; /* Texte en blanc */
+    transition: background-color 0.3s; /* Transition douce pour le fond */
+}
+
+#playerForm button:hover {
+    background-color: #218838; /* Couleur de fond plus foncée au survol */
+}
+
+/* Styles du tableau des scores */
+#scoreboard {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+#scoreboard p {
+    margin: 5px 0;
+}
+
+/* Styles du chronomètre */
+#scoreboard p {
+    margin: 5px 0;
+}
+
+#timer {
+    font-weight: bold;
+    font-size: 1.2em;
+}

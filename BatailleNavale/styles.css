@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+h2, h3 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(10, 30px);
+  grid-template-rows: repeat(10, 30px);
+  gap: 5px;
+  margin: 20px;
+}
+
+.grid div {
+  width: 30px;
+  height: 30px;
+  background-color: #0077cc; /* Couleur des cases de la grille */
+  border: 1px solid #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.grid div:hover {
+  background-color: #005fa3; /* Couleur au survol */
+}
+
+.game-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  text-align: center;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.ship {
+  background-color: #333; /* Couleur pour les navires */
+}
+
+.hit {
+  background-color: red; /* Couleur pour un tir réussi */
+}
+
+.miss {
+  background-color: lightgrey; /* Couleur pour un tir manqué */
+}
+
+.sunk {
+  background-color: darkred; /* Couleur pour un navire coulé */
+}
+
+.cross {
+  color: #333; /* Couleur de la croix */
+  font-size: 20px;
+  font-weight: bold;
+  position: absolute; /* Position absolue pour centrer */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

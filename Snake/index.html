@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serpent</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas pour le jeu -->
+    <canvas id="gameCanvas" width="400" height="400"></canvas>
+    <!-- Affichage du score -->
+    <div id="score" aria-live="polite">Score: 0</div>
+    <!-- Tableau des scores -->
+    <div id="scoreboard" class="dark-mode">
+        <h2>Scoreboard</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Rang</th>
+                    <th>Nom</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody id="scoreList">
+                <!-- Scores will be added dynamically here -->
+            </tbody>
+        </table>
+    </div>
+    <!-- Boutons pour démarrer, redémarrer et basculer le mode sombre -->
+    <div id="buttons">
+        <button id="startButton" onclick="startGame()">Start</button>
+        <button id="restartButton" onclick="restartGame()" style="display: none;">Restart</button>
+        <button id="toggleDarkModeButton" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+:root {
+   --background-color: #fff;
+   --text-color: #000;
+   --primary-color: #4CAF50;
+   --button-color: #007bff;
+   --button-hover-color: #0056b3;
+   --dark-background-color: #222;
+   --dark-text-color: #fff;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.5s, color 0.5s;
+    font-family: Arial, sans-serif;
+}
+
+canvas {
+    border: 1px solid black; /* Bordure autour du canvas */
+    display: block; /* Affichage en bloc */
+    margin: 0 auto; /* Centrage horizontal */
+}
+#score {
+    position: absolute; /* Position absolue par rapport à la fenêtre du navigateur */
+    top: 10px; /* Distance du haut de la fenêtre */
+    right: 10px; /* Distance de la droite de la fenêtre */
+    font-size: 24px; /* Taille de la police */
+    padding: 10px; /* Espacement intérieur */
+    background-color: var(--primary-color);
+    color: var(--dark-text-color);
+    border-radius: 5px;
+}
+#scoreboard {
+    position: absolute;
+    top: 10px; /* Distance du haut */
+    left: 10px; /* Distance de la gauche */
+    font-size: 16px;
+    background-color: #f8f9fa;
+    border: 1px solid #0a4d91;
+    border-radius: 5px;
+    overflow: hidden; /* Masquer le débordement */
+    transition: background-color 0.5s; /* Transition pour le changement de couleur de fond */
+    color: #000;
+}
+#scoreboard table {
+    border-collapse: collapse; /* Fusionner les bordures de la table */
+    width: 100%; /* Largeur de la table */
+}
+#scoreboard th,
+#scoreboard td {
+    border: 1px solid #dee2e6;
+    padding: 10px;
+    text-align: center;
+}
+#scoreboard th {
+    background-color: #f1f3f5;
+    font-weight: bold; /* Police en gras */
+}
+#scoreboard tbody tr:nth-child(even) {
+    background-color: #edf2ff; /* Couleur de fond des lignes paires */
+}
+#scoreboard tbody tr:hover {
+    background-color: #d1eaff; /* Couleur de fond au survol des lignes */
+}
+#buttons {
+    position: absolute;
+    bottom: 10px; /* Distance du bas */
+    left: 50%; /* Positionnement au milieu */
+    transform: translateX(-50%); /* Centrage horizontal */
+    text-align: center;
+}
+#buttons button {
+    margin: 5px; /* Marge */
+    font-size: 16px;
+    padding: 10px 20px; /* 10px = marge haut et bas, 20px = marge gauche et droite */
+    background-color: var(--button-color);
+    color: var(--dark-text-color);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Transition pour le changement de couleur de fond */
+}
+#buttons button:hover {
+    background-color: var(--button-hover-color); /* Couleur de fond au survol */
+}
+.dark-mode {
+    background-color: var(--dark-background-color);
+    color: var(--dark-text-color);
+}
+@media (max-width: 600px) {
+    canvas {
+        width: 100%;
+        height: auto;
+    }
+
+    #score, #scoreboard, #buttons {
+        position: static;
+        margin: 10px;
+        text-align: center;
+    }
+
+    #buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #buttons button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
