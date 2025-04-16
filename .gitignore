@@ -1,0 +1,13 @@
+# Ignorer les dossiers de jeux non terminés ou à exclure
+Clicker/
+BatailleNavale/
+
+# (Optionnel) Fichiers système courants
+.DS_Store
+Thumbs.db
+
+# (Optionnel) Fichiers temporaires
+*.log
+*.tmp
+*.swp
+*.bak
